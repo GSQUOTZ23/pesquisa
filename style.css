@@ -143,11 +143,12 @@ h4 {
 
 h5 {
   color: orange ;
+ font-size: 18px;
 }
 h6 {
   color: black;
 }
 
-li {
+label {
   color: blue;
 }
