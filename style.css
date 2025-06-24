@@ -1,0 +1,144 @@
+/* Fonte Open Sans aplicada via link no HTML */
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f9f9f9;
+}
+h2 {
+    color: rgb(3, 3, 121);
+    text-align: center;
+    font-size: 16px;
+}
+h1 {
+text-align: center;
+    }
+    p {
+text-align: justify;
+font-size: 13px;
+    }
+.container {
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+  text-align: center;
+  color: #FFA500; /* Laranja */
+  margin-bottom: 20px;
+}
+
+form label,
+form select,
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+form input[type="radio"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #FFA500;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #e69500;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+.genero-opcoes {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.genero-box {
+  border: 3px solid #807700;
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: #004080;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  width: 69px;
+}
+
+.genero-box input {
+  display: none;
+}
+
+.genero-box:hover {
+  background-color: #e6f0ff;
+}
+
+.genero-box input:checked + span,
+.genero-box:has(input:checked) {
+  background-color: #ccbf10;
+  color: white;
+}
+
+
+.titulo-com-imagem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.titulo {
+  font-size: 24px;
+
+  flex: 1;
+}
+
+.logo-direita {
+  width: 80px; /* ajuste conforme necessário */
+  height: auto;
+}
+
+
+
+ul li {
+  font-size: 12px;
+}
+
+h3  {
+  color: rgb(4, 4, 114);
+  text-align: center;
+  margin-top: 40px;
+  font-size: xx-large;
+  
+}
+
+
+h4 {
+  color: orangered
+  
+}
