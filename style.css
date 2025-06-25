@@ -115,9 +115,11 @@ button:hover {
 }
 
 .logo-direita {
-  width: 80px; /* ajuste conforme necessário */
+  width: 50px; /* ou até menor */
   height: auto;
+  max-height: 60px; /* opcional para limitar a altura */
 }
+
 
 
 
