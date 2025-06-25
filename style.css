@@ -1,5 +1,3 @@
-/* Fonte Open Sans aplicada via link no HTML */
-
 body {
   margin: 0;
   padding: 20px;
@@ -11,9 +9,7 @@ h2 {
     text-align: center;
     font-size: 16px;
 }
-h1 {
-text-align: center;
-    }
+
     p {
 text-align: justify;
 font-size: 13px;
@@ -29,8 +25,8 @@ font-size: 13px;
 
 .titulo {
   text-align: center;
-  color: #FFA500; /* Laranja */
-  margin-bottom: 20px;
+  color: #ff5100; /* Laranja */
+
 }
 
 form label,
@@ -48,7 +44,7 @@ form input[type="radio"] {
 }
 
 button {
-  background-color: #FFA500;
+  background-color: #ff7300;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -142,7 +138,7 @@ h4 {
 }
 
 h5 {
-  color: orange ;
+  color: rgb(211, 128, 3) ;
  font-size: 18px;
 }
 h6 {
@@ -151,4 +147,38 @@ h6 {
 
 label {
   color: darkblue;
+}
+
+.introducao {
+  border: 4px solid orange;
+  border-radius: 12px;
+  padding: 25px;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+.topo {
+  background-color: #fff;
+  border-bottom: 2px solid #ccc;
+  padding: 20px 30px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo-esquerda {
+  max-height: 80px;
+  height: auto;
+}
+
+.titulo-header {
+  font-size: 1.8rem;
+  color: #003366;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
 }
