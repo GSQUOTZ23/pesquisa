@@ -138,6 +138,8 @@ h3  {
 
 h4 {
   color: black;
+  text-align: justify;
+  line-height: 1.6;
 }
 
 h5 {
