@@ -148,128 +148,17 @@
       <label><input type="radio" name="satisfeito" value="Não" /> Não</label>
 
 
-<h4>2.5 Dos beneficios sociais existentes na ENNA, enumere por ordem de 1 a 8 , os que sao mais relevantes para voce:</h4>
+<h4>2.5 Dos beneficios sociais existentes na ENNA, assinale 4 dos que são mais relevantes para voce:</h4>
 
 <div class="pontuacao-itens">
-  <label>
-    <span>Seguro de saúde:</span>
-   <select class="pontuacao" name="seguro_saude" required>
-      <option value=""></option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-       <option value="8">8</option>
-    </select>
-  </label>
-
-  <label>
-   <span>Seguro de acidente de trabalho:</span>
-    <select class="pontuacao" name="seguro_acidente" required>
-      <option value=""></option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-       <option value="8">8</option>
-    </select>
-  </label>
-
-  <label>
-    <span>Fundo de pensões:</span>
-     <select class="pontuacao" name="fundo_pensoes" required>
-      <option value=""></option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-       <option value="8">8</option>
-    </select>
-  </label>
-
-  <label>
-<span>Assistência médica e medicamentosa:</span>
-    <select class="pontuacao" name="assistencia_medica" required>
-      <option value=""></option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-       <option value="8">8</option>
-    </select>
-  </label>
-
-  <label>
-    <span>Bilhetes de passagem:</span>
-    <select class="pontuacao" name="bilhetes_passagem" required>
-      <option value=""></option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-       <option value="8">8</option>
-    </select>
-  </label>
-
-  <label>
-    <span>Fundo social:</span>
-    <select class="pontuacao" name="fundo_social" required>
-      <option value=""></option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-       <option value="8">8</option>
-    </select>
-  </label>
-
-  <label>
-    <span>Subsídio de transporte:</span>
-     <select class="pontuacao" name="subsidio_transporte" required>
-      <option value=""></option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-       <option value="8">8</option>
-    </select>
-  </label>
-
-  <label>
-    <span>Cartão de abastecimento alimentar:</span>
-     <select class="pontuacao" name="cartao_alimentacao" required>
-      <option value=""></option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-       <option value="8">8</option>
-    </select>
-  </label>
+  <label><input type="checkbox" name="beneficios" value="seguro_saude" /> Seguro de saúde</label><br />
+  <label><input type="checkbox" name="beneficios" value="seguro_acidente" /> Seguro de acidente de trabalho</label><br />
+  <label><input type="checkbox" name="beneficios" value="fundo_pensoes" /> Fundo de pensões</label><br />
+  <label><input type="checkbox" name="beneficios" value="assistencia_medica" /> Assistência médica e medicamentosa</label><br />
+  <label><input type="checkbox" name="beneficios" value="bilhetes_passagem" /> Bilhetes de passagem</label><br />
+  <label><input type="checkbox" name="beneficios" value="fundo_social" /> Fundo social</label><br />
+  <label><input type="checkbox" name="beneficios" value="subsidio_transporte" /> Subsídio de transporte</label><br />
+  <label><input type="checkbox" name="beneficios" value="cartao_alimentacao" /> Cartão de abastecimento alimentar</label><br />
 </div>
 
         <h4>2.6 Sente-se motivado(a) e comprometido(a) no seu trabalho diário ?</h4>
@@ -412,31 +301,17 @@
   </div>
 
 <script>
-  const selects = document.querySelectorAll(".pontuacao");
-
-  function atualizarDisponibilidade() {
-    const valoresSelecionados = [...selects]
-      .map(sel => sel.value)
-      .filter(v => v !== "");
-
-    selects.forEach(sel => {
-      const valorAtual = sel.value;
-      [...sel.options].forEach(option => {
-        if (option.value === "") {
-          option.disabled = false;
-        } else if (valoresSelecionados.includes(option.value) && option.value !== valorAtual) {
-          option.disabled = true;
-        } else {
-          option.disabled = false;
-        }
-      });
+  const checkboxes = document.querySelectorAll('input[type="checkbox"][name="beneficios"]');
+  checkboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      const checked = document.querySelectorAll('input[type="checkbox"][name="beneficios"]:checked');
+      if (checked.length > 4) {
+        cb.checked = false;
+        alert('Por favor, selecione no máximo 4 benefícios.');
+      }
     });
-  }
-
-  selects.forEach(sel => sel.addEventListener("change", atualizarDisponibilidade));
-  atualizarDisponibilidade(); // Para ativar desde o início
+  });
 </script>
-
      
 </body>
 </html>
