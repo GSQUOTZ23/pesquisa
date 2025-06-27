@@ -160,7 +160,21 @@
   <label class="checkbox-item">Subsídio de transporte <input type="checkbox" name="beneficios" value="subsidio_transporte" /></label>
   <label class="checkbox-item">Cartão de abastecimento alimentar <input type="checkbox" name="beneficios" value="cartao_alimentacao" /></label>
 </div>
+<style>
+  .checkbox-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    margin-bottom: 8px;
+    font-family: 'Open Sans', sans-serif;
+    color: navy;
+  }
 
+  .checkbox-item input[type="checkbox"] {
+    transform: scale(1.2); /* Aumenta um pouco o tamanho */
+  }
+</style>
         <h4>2.6 Sente-se motivado(a) e comprometido(a) no seu trabalho diário ?</h4>
       <label><input type="radio" name="comprometido" value="Sim" required /> Sim</label>
       <label><input type="radio" name="comprometido" value="Não" /> Não</label>
