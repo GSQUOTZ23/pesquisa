@@ -200,8 +200,8 @@ label {
 }
 
 .pontuacao-itens select {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
