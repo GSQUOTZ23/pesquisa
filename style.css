@@ -201,12 +201,12 @@ label {
 
 .pontuacao-itens select {
   width: 16px;
-  height: 16px;
-  font-size: 16px;
-  font-weight: bold;
+  height: 20px;
+  font-size: 20px;
+  
   text-align: center;
-  border: 3px solid #000; /* Borda grossa */
-  border-radius: 6px;
+  border: 1px solid #000; /* Borda grossa */
+
   background-color: #fff;
   appearance: none;
   -webkit-appearance: none;
