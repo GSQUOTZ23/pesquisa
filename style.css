@@ -189,7 +189,7 @@ label {
 
 .pontuacao-itens {
   font-family: Arial, sans-serif;
-  max-width: 100px;
+  max-width: 200px;
 }
 
 .pontuacao-itens label {
@@ -200,9 +200,9 @@ label {
 }
 
 .pontuacao-itens select {
-  width: 16px;
+  width: 26px;
   height: 20px;
-  font-size: 20px;
+  font-size: 16px;
   
   text-align: center;
   border: 1px solid #000; /* Borda grossa */
