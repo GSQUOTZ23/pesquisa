@@ -153,7 +153,7 @@
 <div class="pontuacao-itens">
   <label>
     <span>Seguro de saúde:</span>
-    <select name="seguro_saude" required>
+   <select class="pontuacao" name="seguro_saude" required>
       <option value=""></option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -167,7 +167,7 @@
   </label>
 
   <label>
-    <span>Seguro de acidente de trabalho:</span>
+   <span>Seguro de acidente de trabalho:</span>
     <select name="seguro_acidente" required>
       <option value=""></option>
       <option value="1">1</option>
@@ -183,7 +183,7 @@
 
   <label>
     <span>Fundo de pensões:</span>
-    <select name="fundo_pensoes" required>
+     <select class="pontuacao" name="fundo_pensoes" required>
       <option value=""></option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -197,7 +197,7 @@
   </label>
 
   <label>
-    <span>Assistência médica e medicamentosa:</span>
+<span>Assistência médica e medicamentosa:</span>
     <select name="assistencia_medica" required>
       <option value=""></option>
       <option value="1">1</option>
@@ -213,7 +213,7 @@
 
   <label>
     <span>Bilhetes de passagem:</span>
-    <select name="bilhetes_passagem" required>
+    <select class="pontuacao" name="bilhetes_passagem" required>
       <option value=""></option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -228,7 +228,7 @@
 
   <label>
     <span>Fundo social:</span>
-    <select name="fundo_social" required>
+    <select class="pontuacao" name="fundo_social" required>
       <option value=""></option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -243,7 +243,7 @@
 
   <label>
     <span>Subsídio de transporte:</span>
-    <select name="subsidio_transporte" required>
+     <select class="pontuacao" name="subsidio_transporte" required>
       <option value=""></option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -258,7 +258,7 @@
 
   <label>
     <span>Cartão de abastecimento alimentar:</span>
-    <select name="cartao_alimentacao" required>
+     <select class="pontuacao" name="cartao_alimentacao" required>
       <option value=""></option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -411,6 +411,27 @@
     </form>
   </div>
 
+  <script>
+    const selects = document.querySelectorAll(".pontuacao");
+
+    function atualizarDisponibilidade() {
+      const valoresSelecionados = [...selects].map(sel => sel.value).filter(v => v !== "");
+      selects.forEach(sel => {
+        const valorAtual = sel.value;
+        [...sel.options].forEach(option => {
+          if (option.value === "") {
+            option.disabled = false;
+          } else if (valoresSelecionados.includes(option.value) && option.value !== valorAtual) {
+            option.disabled = true;
+          } else {
+            option.disabled = false;
+          }
+        });
+      });
+    }
+
+    selects.forEach(sel => sel.addEventListener("change", atualizarDisponibilidade));
+  </script>
      
 </body>
 </html>
