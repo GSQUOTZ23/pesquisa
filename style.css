@@ -194,18 +194,18 @@ label {
 
 .pontuacao-itens label {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  
+
   margin-bottom: 10px;
 }
 
 .pontuacao-itens select {
-  width: 26px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   font-size: 16px;
   
   text-align: center;
-  border: 1px solid #000; /* Borda grossa */
+  border: 3px solid #000; /* Borda grossa */
 
   background-color: #fff;
   appearance: none;
