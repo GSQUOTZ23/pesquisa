@@ -195,6 +195,11 @@
   transition: transform 0.2s ease;
   border-radius: 50%;
   padding: 10px;
+  position: relative;
+}
+
+.reacao input[type="radio"] {
+  display: none; /* 👉 Esconde o botão de rádio */
 }
 
 .emoji {
@@ -208,9 +213,10 @@
 }
 
 .reacao.selecionado .emoji {
-  transform: scale(2.2); /* aumenta o tamanho ao clicar */
+  transform: scale(2.2);
   filter: drop-shadow(0 0 6px #00bcd4);
 }
+
 
 
 </style>
