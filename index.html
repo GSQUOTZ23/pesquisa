@@ -168,7 +168,7 @@
 
   <label>
    <span>Seguro de acidente de trabalho:</span>
-    <select class="pontuação" name="seguro_acidente" required>
+    <select class="pontuacao" name="seguro_acidente" required>
       <option value=""></option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -198,7 +198,7 @@
 
   <label>
 <span>Assistência médica e medicamentosa:</span>
-    <select name="assistencia_medica" required>
+    <select class="pontuacao" name="assistencia_medica" required>
       <option value=""></option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -411,27 +411,32 @@
     </form>
   </div>
 
-  <script>
-    const selects = document.querySelectorAll(".pontuacao");
+<script>
+  const selects = document.querySelectorAll(".pontuacao");
 
-    function atualizarDisponibilidade() {
-      const valoresSelecionados = [...selects].map(sel => sel.value).filter(v => v !== "");
-      selects.forEach(sel => {
-        const valorAtual = sel.value;
-        [...sel.options].forEach(option => {
-          if (option.value === "") {
-            option.disabled = false;
-          } else if (valoresSelecionados.includes(option.value) && option.value !== valorAtual) {
-            option.disabled = true;
-          } else {
-            option.disabled = false;
-          }
-        });
+  function atualizarDisponibilidade() {
+    const valoresSelecionados = [...selects]
+      .map(sel => sel.value)
+      .filter(v => v !== "");
+
+    selects.forEach(sel => {
+      const valorAtual = sel.value;
+      [...sel.options].forEach(option => {
+        if (option.value === "") {
+          option.disabled = false;
+        } else if (valoresSelecionados.includes(option.value) && option.value !== valorAtual) {
+          option.disabled = true;
+        } else {
+          option.disabled = false;
+        }
       });
-    }
+    });
+  }
 
-    selects.forEach(sel => sel.addEventListener("change", atualizarDisponibilidade));
-  </script>
+  selects.forEach(sel => sel.addEventListener("change", atualizarDisponibilidade));
+  atualizarDisponibilidade(); // Para ativar desde o início
+</script>
+
      
 </body>
 </html>
