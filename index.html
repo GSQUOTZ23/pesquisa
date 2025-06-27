@@ -183,22 +183,35 @@
   justify-content: center;
 }
 
-.reacao {
+.reacoes {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  gap: 30px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.reacao {
   cursor: pointer;
-  padding: 10px 15px;
-  border-radius: 12px;
-  transition: background 0.3s;
+  font-size: 40px;
+  transition: transform 0.2s, filter 0.2s;
+  border-radius: 50%;
+  padding: 10px;
 }
 
-.reacao:hover {
-  background-color: #f0f0f0;
+.reacao input {
+  display: none;
 }
 
-.reacao input[type="radio"] {
-  transform: scale(1.4);
+.reacao:hover .emoji {
+  transform: scale(1.2);
+  filter: brightness(1.3);
+}
+
+.reacao.selecionado .emoji {
+  transform: scale(1.5);
+  filter: drop-shadow(0 0 5px #00bcd4);
+}
+
 }
 
 </style>
@@ -336,20 +349,21 @@
 </h4>
   
 <h4>Como se sentiu ao responder este questionário?</h4>
-<div class="reacoes">
-  <label class="reacao">
+<div class="reacoes" id="reacoes">
+  <label class="reacao" data-reacao="like">
     <input type="radio" name="reacao_final" value="like" required />
-    👍 Gostei
+    <span class="emoji">👍</span>
   </label>
-  <label class="reacao">
+  <label class="reacao" data-reacao="dislike">
     <input type="radio" name="reacao_final" value="dislike" />
-    👎 Não gostei
+    <span class="emoji">👎</span>
   </label>
-  <label class="reacao">
+  <label class="reacao" data-reacao="adorei">
     <input type="radio" name="reacao_final" value="adorei" />
-    ❤️ Adorei
+    <span class="emoji">❤️</span>
   </label>
 </div>
+
 
      
       <!-- Botão de envio -->
@@ -369,6 +383,16 @@
     });
   });
 </script>
-     
+   <script>
+  const reacoes = document.querySelectorAll('.reacao');
+  reacoes.forEach((reacao) => {
+    reacao.addEventListener('click', () => {
+      reacoes.forEach(r => r.classList.remove('selecionado'));
+      reacao.classList.add('selecionado');
+      reacao.querySelector('input').checked = true;
+    });
+  });
+</script>
+  
 </body>
 </html>
