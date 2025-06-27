@@ -186,22 +186,28 @@ label {
   font-weight: bold;
   font-family: 'Open Sans', sans-serif;
 }
-
 .pontuacao-itens {
   font-family: Arial, sans-serif;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .pontuacao-itens label {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
+  gap: 10px;
+}
+
+.pontuacao-itens span {
+  flex: 1; /* Para forçar todos os textos à mesma largura */
 }
 
 .pontuacao-itens select {
-  width: 40px;
+  width: 50px;
   height: 30px;
   font-size: 16px;
+  text-align: center;
   border: 3px solid #000;
   background-color: #fff;
   appearance: none;
@@ -210,3 +216,4 @@ label {
   cursor: pointer;
   padding: 0;
 }
+
